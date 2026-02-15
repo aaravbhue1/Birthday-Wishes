@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>For Aditi · birthday love</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- canvas-confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+  <!-- custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- floating hearts container (filled by JS) -->
+  <div class="hearts-container" id="heartsContainer"></div>
+
+  <!-- BEAUTIFUL FRONT PAGE (cover) -->
+  <div class="front-page" id="frontPage">
+    <div class="front-card">
+      <i class="fas fa-heart" style="font-size:4rem; color:#ffa28b; margin-bottom:1rem;"></i>
+      <h1>For My Dearest Aditi</h1>
+      <p class="front-sub">A birthday journey made with love</p>
+      <div class="front-message">
+        <p>Every page holds a little piece of my heart.<br>Ready to explore?</p>
+      </div>
+      <button class="begin-btn" id="beginBtn">Begin the Celebration →</button>
+    </div>
+  </div>
+
+  <!-- Thank you overlay (no return button) -->
+  <div class="overlay" id="thankYouOverlay">
+    <div class="overlay-card">
+      <i class="fas fa-heart" style="font-size:4rem; color:#e0836a;"></i>
+      <h2>Thank You, Aditi!</h2>
+      <p>✨ Thank you for being you.<br>Wishing you endless joy! ✨</p>
+      <!-- Return button removed as requested -->
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT (initially hidden) -->
+  <main class="container" id="mainContainer" style="display: none;">
+    <header>
+      <h1>For My Dearest Aditi</h1>
+      <div class="subtitle">Celebrating You Today & Always</div>
+    </header>
+
+    <div class="chapter-badge" id="pageCounter">Chapter 1 of 6</div>
+
+    <!-- pages container (6 pages) -->
+    <div class="pages-container" id="pagesContainer">
+      <!-- page 1 -->
+      <div class="page active" id="page1">
+        <i class="icon fas fa-sun"></i>
+        <h2>Another Year Around the Sun</h2>
+        <p class="message">With each trip around the sun, you shine brighter and warm our world. Happy birthday, my sunshine.</p>
+        <p class="quote">“You are the sunshine that makes every day special.”</p>
+      </div>
+      <!-- page 2 -->
+      <div class="page" id="page2">
+        <i class="icon fas fa-gift"></i>
+        <h2>A Gift to the World</h2>
+        <p class="message">Your kindness, grace, and beautiful soul are a gift to everyone lucky enough to know you.</p>
+        <p class="quote">“The best gift is you.”</p>
+      </div>
+      <!-- page 3 -->
+      <div class="page" id="page3">
+        <i class="icon fas fa-balloon"></i>
+        <h2>Every Moment with You</h2>
+        <p class="message">Every second spent with you is filled with joy and laughter. Thank you for the happiness you bring.</p>
+        <p class="quote">“Happiness is being with you.”</p>
+      </div>
+      <!-- page 4 -->
+      <div class="page" id="page4">
+        <i class="icon fas fa-cake-candles"></i>
+        <h2>You Deserve All the Sweetness</h2>
+        <p class="message">May your year be filled with sweet surprises and delightful moments, just like you.</p>
+        <p class="quote">“Sweet as you, bright as your smile.”</p>
+      </div>
+      <!-- page 5 -->
+      <div class="page" id="page5">
+        <i class="icon fas fa-sparkles"></i>
+        <h2>Dreams and Sparkles</h2>
+        <p class="message">May all your dreams sparkle and come true. You deserve a world of magic.</p>
+        <p class="quote">“May your days be filled with magic and wonder.”</p>
+      </div>
+      <!-- page 6 with celebrate button -->
+      <div class="page" id="page6">
+        <i class="icon fas fa-star"></i>
+        <h2>Happy Birthday, Aditi!</h2>
+        <p class="message">Today we celebrate the wonderful person you are. May your year be as amazing as you!</p>
+        <p class="quote">“You are loved beyond measure.”</p>
+        <button class="celebrate-btn" id="celebrateBtn">Celebrate!</button>
+      </div>
+    </div>
+
+    <!-- navigation + dots -->
+    <div class="navigation">
+      <button class="nav-btn" id="prevBtn" disabled>Previous</button>
+      <div class="dots" id="dotsContainer"></div>
+      <button class="nav-btn" id="nextBtn">Next</button>
+    </div>
+
+    <footer>
+      <span>made for Aditi with infinite love</span>
+      <span>created by Subham with love <i class="fas fa-heart heart-beat"></i></span>
+    </footer>
+  </main>
+
+  <!-- custom JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+</html>
